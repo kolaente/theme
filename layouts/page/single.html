@@ -1,14 +1,25 @@
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
 
-		<div class="container content">
-			{{ .Content }}
-
-			{{ if .Site.DisqusShortname }}
-			<div class="col-xs-12">
-				{{ partial "disqus.html" . }}
-			</div>
-			{{ end }}
+<div class="container is-centered page">
+	<div class="columns">
+		<div class="column is-one-quarter">
+			{{ partial "menu" . }}
 		</div>
+		<div class="column">
+			<div class=" content">
+				{{ .Content }}
+
+				{{ if .Site.DisqusShortname }}
+				<div class="col-xs-12">
+					{{ partial "disqus.html" . }}
+				</div>
+				{{ end }}
+			</div>
+		</div>
+	</div>
+</div>
+
+
 
 {{ partial "footer.html" . }}

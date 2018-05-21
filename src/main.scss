@@ -1,3 +1,7 @@
+*, *:hover, *:active, *:focus{
+  outline: none;
+}
+
 @import '../node_modules/bulmaswatch/flatly/variables';
 @import "../node_modules/bulma/bulma";
 @import '../node_modules/bulmaswatch/flatly/overrides';
@@ -32,4 +36,8 @@
   a{
     color: darken(#14a189, 10%) !important;
   }
+}
+
+.page{
+  margin: 2em auto;
 }
