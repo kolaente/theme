@@ -1,17 +1,15 @@
 		<footer class="footer">
 			<div class="container">
-				<div class="row">
-					<div class="col-xs-12 text-xs-center">
-						<p>
-							Copyright &copy; {{ now.Year }} <a href="{{ .Site.Params.website }}">{{ .Site.Params.author }}</a>. All rights reserved. Made with <i class="fa fa-heart" aria-hidden="true"></i> and <a href="https://gohugo.io">Hugo</a>. Sponsored by <a href="http://inblockchain.com">INBlockchain</a>.
-						</p>
+				<div class="content has-text-centered">
+					<p>
+						Copyright &copy; {{ now.Year }} <a href="{{ .Site.Params.website }}">{{ .Site.Params.author }}</a>. All rights reserved. Made with <i class="fa fa-heart" aria-hidden="true"></i> and <a href="https://gohugo.io">Hugo</a>. Sponsored by <a href="http://inblockchain.com">INBlockchain</a>.
+					</p>
 
-						<nav class="nav nav-inline">
-							{{ $lang := .Lang }}{{ $base := .Site.BaseURL }}{{ range .Site.Languages }}
-								<a class="nav-link" href="{{ $base }}{{ .Lang }}">{{ .LanguageName }}</a>
-							{{ end }}
-						</ul>
-					</div>
+					<p>
+						{{ $lang := .Lang }}{{ $base := .Site.BaseURL }}{{ range .Site.Languages }}
+						<a class="nav-link" href="{{ $base }}{{ .Lang }}">{{ .LanguageName }}</a>
+						{{ end }}
+					</p>
 				</div>
 			</div>
 		</footer>
@@ -20,5 +18,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
 		<script src="{{.Site.BaseURL}}scripts/main.js"></script>
-	</body>
+
+		</body>
 </html>
