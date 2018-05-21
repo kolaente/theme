@@ -20,13 +20,7 @@
 
 		{{ .Content }}
 
-		{{ if .Site.DisqusShortname }}
-			<div class="row">
-				<div class="col-xs-12">
-					{{ partial "disqus.html" . }}
-				</div>
-			</div>
-		{{ end }}
+		{{ partial "disqus.html" . }}
 	</div>
 </div>
 
