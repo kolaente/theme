@@ -1,18 +1,12 @@
 {{ partial "header.html" . }}
 {{ partial "navbar.html" . }}
 
-<div class="container content">
-	<div class="row">
-		<div class="col-xs-12">
+<section class="section">
+	<div class="container is-centered page">
+		<div class=" content">
 			{{ .Content }}
 		</div>
-
-		{{ if .Site.DisqusShortname }}
-			<div class="col-xs-12">
-				{{ partial "disqus.html" . }}
-			</div>
-		{{ end }}
 	</div>
-</div>
+</section>
 
 {{ partial "footer.html" . }}
